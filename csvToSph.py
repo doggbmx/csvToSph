@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Cargar el archivo CSV
-csv_file_path = 'locales_de_coleta_de_amostras.csv'
+csv_file_path = 'YOUR_CSV_FILE_PATH'
 data = pd.read_csv(csv_file_path)
 
 # Filtrar las columnas necesarias
@@ -14,7 +14,7 @@ for index, row in coordinates.iterrows():
     sph_content += f"{local}: {lat}, {lon}\n"
 
 # Guardar el .sph
-sph_file_path = './sph/locales_de_coleta_de_amostras.sph'
+sph_file_path = './sph/coordinates.sph'
 with open(sph_file_path, 'w') as file:
     file.write(sph_content)
 
